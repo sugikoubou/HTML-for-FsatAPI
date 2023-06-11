@@ -8,6 +8,15 @@
     <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
+    
+<h2>店舗推測を送信された画像から行います</h2>
+
+<form action="/api/predict" enctype="multipart/form-data" method="post">
+<input name="file" type="file" accept="image/*" >
+<input type="submit">
+</form>
+
+
     <div id="hello-wrapper">
       <div id="particles-js"></div>
       <div class="content position-absolute w-100 top-0 pt-5">
