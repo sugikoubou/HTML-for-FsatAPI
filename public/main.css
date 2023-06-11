@@ -9,7 +9,7 @@ body {
 
 .bg_1 {
     border: 1px solid gray;
-    background-color: white;   /* 背景色指定 */
+    /*background-color: white;   背景色指定 */
     text-align:  center;        /* 中央寄せ */
   
 }
