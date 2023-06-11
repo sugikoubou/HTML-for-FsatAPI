@@ -8,8 +8,9 @@ body {
 }
 
 .bg_1 {
-    height: 250px;                  /* 高さ指定 */
-    padding:  20px;                 /* 余白指定 */
+    height: 90px;                  /* 高さ指定 */
+    widge: 300px;
+    padding:  200px;                 /* 余白指定 */
     font-size: 20px;                /* 文字サイズ指定 */
     background-color: white;   /* 背景色指定 */
 }
