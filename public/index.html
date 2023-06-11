@@ -23,10 +23,10 @@
     <h2>店舗推測を送信された画像から行います</h2>
     </div>
 
-    <form action="/api/predict" enctype="multipart/form-data" method="post">
-      <input name="file" type="file" accept="image/*" >
-      <input type="submit">
-    </form>
+    <form method="post" action="" enctype="multipart/form-data" class="mycss">
+	<input type="file" id="file" name="file" accept="image/*" />
+	<input type="button" class="button" value="Upload" id="but_upload">
+</form>
 
 
     <div id="hello-wrapper">
@@ -44,6 +44,7 @@
           </a>
         </div>
         <div id="world">
+          
           <canvas id='rotatingGlobe' style='cursor: move;'></canvas>
         </div>
       </div>
