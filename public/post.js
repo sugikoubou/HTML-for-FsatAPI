@@ -1,6 +1,6 @@
 (document).ready(function () {
 
-    $("#shutter").click(function () {
+    $("#but_upload").click(function () {
 
         var fd = new FormData();
         var files = $('#file')[0].files;
