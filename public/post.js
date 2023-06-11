@@ -10,7 +10,7 @@
             fd.append('file', files[0]);
 
             $.ajax({
-                url: 'https://～～宛先のアドレス',
+                url: 'https://38b2-2400-4150-4341-1f00-3dad-545c-8e7c-8010.ngrok.io/api/predict',
                 type: 'post',
                 data: fd,
                 contentType: false,
