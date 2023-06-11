@@ -7,6 +7,10 @@ body {
   font-weight: 700;
 }
 
+.shiro {
+  color: #fff;
+}
+
 #hello-wrapper {
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
