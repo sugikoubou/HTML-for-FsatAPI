@@ -2,9 +2,12 @@
 <html lang=en>
   <head>
     <meta charset=utf-8>
-    <title>Cyclic: 看板画像分類システム</title>
+    <title>看板画像分類システム</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous">
     
     
     <link rel="stylesheet" type="text/css" href="/main.css">
@@ -16,8 +19,9 @@
     
   </head>
   <body>
-    
-  <h2>店舗推測を送信された画像から行います</h2>
+    <div class="shiro">
+    <h2>店舗推測を送信された画像から行います</h2>
+    </div>
 
     <form action="/api/predict" enctype="multipart/form-data" method="post">
       <input name="file" type="file" accept="image/*" >
