@@ -49,24 +49,36 @@
     <form>
  	<button type="button" id="shutter">シャッター</button>
     </form>
-	  
-	  
-<script>
-window.onload = () => {
-  const video  = document.querySelector("#camera");
-  const canvas = document.querySelector("#picture");
 
-  /** カメラ設定 */
-  const constraints = {
-    audio: false,
-    video: {
-      width: 180,
-      height: 120,
-      facingMode: "environment"   // フロントカメラを利用する
-      // facingMode: { exact: "environment" }  // リアカメラを利用する場合
-    }
-  };
 	
+	
+    <div id="hello-wrapper">
+      
+      <div id="particles-js"></div>
+      
+      <div class="content position-relative w-100 top-2 pt-3">
+        <div class="cta">
+          <div id="hello" class="typewriter pb-3">
+            サイトの配置
+          </div>
+          
+          <a class="btn btn-primary mb-5" href="https://38b2-2400-4150-4341-1f00-3dad-545c-8e7c-8010.ngrok.io/">
+          WebAPIココ
+          </a>
+        </div>
+        <div id="world">
+          
+          <canvas id='rotatingGlobe' style='cursor: move;'></canvas>
+        </div>
+      </div>
+    </div>
+    <script type='text/javascript' src='//d3js.org/d3.v3.min.js'></script>
+    <script type='text/javascript' src='//d3js.org/topojson.v1.min.js'></script>
+    <script type='text/javascript' src='planetaryjs.min.js'></script>
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type='text/javascript' src='particles.js'></script>
+    <script type='text/javascript' src='globe.js'></script>
 <script>
 window.onload = () => {
   const video  = document.querySelector("#camera");
@@ -115,40 +127,6 @@ window.onload = () => {
   });
 };
 </script>
-	
-	
-	
-
-<!--
-    <div id="hello-wrapper">
-      
-      <div id="particles-js"></div>
-      
-      <div class="content position-relative w-100 top-2 pt-3">
-        <div class="cta">
-          <div id="hello" class="typewriter pb-3">
-            サイトの配置
-          </div>
-          
-          <a class="btn btn-primary mb-5" href="https://38b2-2400-4150-4341-1f00-3dad-545c-8e7c-8010.ngrok.io/">
-          WebAPIココ
-          </a>
-        </div>
-        <div id="world">
-          
-          <canvas id='rotatingGlobe' style='cursor: move;'></canvas>
-        </div>
-      </div>
-    </div>
-    <script type='text/javascript' src='//d3js.org/d3.v3.min.js'></script>
-    <script type='text/javascript' src='//d3js.org/topojson.v1.min.js'></script>
-    <script type='text/javascript' src='planetaryjs.min.js'></script>
-    <script src="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type='text/javascript' src='particles.js'></script>
-    <script type='text/javascript' src='globe.js'></script>
-
--->
 
   </body>
 </html>
