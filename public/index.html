@@ -32,11 +32,6 @@
     	<h2>店舗推測を送信された画像から行います</h2>
 
 
-    	<form method="post" action="" enctype="multipart/form-data" class="mycss">
-	<input type="file" id="file" name="file" accept="image/*" />
-	<input type="button" class="button" value="Upload" id="but_upload">
-			
-	</form>
 	    
 		<div id="app">
     			<label for="upload">写真を撮影してアップロードする</label>
@@ -49,7 +44,11 @@
 	  
     	<video id="camera" width="400" height="400"></video>
 	<canvas id="picture" width="400" height="400"></canvas>
-    	<form>
+    	<form method="post" action="" enctype="multipart/form-data" class="mycss">
+	<input type="file" id="file" name="file" accept="image/*" />
+		
+	<input type="button" class="button" value="Upload" id="but_upload">
+
  	<button type="button" id="shutter">シャッター</button>
    	 </form>
 
