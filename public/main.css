@@ -48,15 +48,7 @@ body {
   height: 100vh;
 }
 
-#app {
-    width: 96%;
-    padding: 28px;
-    max-width: 500px;
-    margin: 40px auto;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px 0px rgba(200, 200, 200, 1);
-}
+
 
 label {
     display: block;
