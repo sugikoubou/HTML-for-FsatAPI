@@ -14,7 +14,7 @@ function updateButton() {
       body: img
     };
     
-    sendServer('https://76cf-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', param);
+    sendServer('https://7035-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', param);
 
 
 /**
