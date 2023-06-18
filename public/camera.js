@@ -51,7 +51,7 @@ window.onload = () => {
     };
 
 
-    const imgFile = _convertToFile(imgData, $inputFile)
+    const imgFile = _convertToFile(test)
 
             const fd = new FormData()
             fd.append('image', imgFile)
@@ -100,14 +100,14 @@ window.onload = () => {
         });
     }
 
-  function _convertToFile (imgData, file) {
+  function _convertToFile (imgData) {
 　　　　　　　// ここでバイナリにしている
             const blob = atob(imgData.replace(/^.*,/, ''));
             let buffer = new Uint8Array(blob.length);
             for (let i = 0; i < blob.length; i++) {
                 buffer[i] = blob.charCodeAt(i);
             }
-            return new File([buffer.buffer], file.name, {type: file.type});
+            return new File([buffer.buffer], {name: hogee, {type: image/png});
         }
   
 };
