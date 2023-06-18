@@ -50,7 +50,7 @@ window.onload = () => {
       },
       body: JSON.stringify({data: test})
     };
-    sendServer('https://d232-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok.io/api/predict', param)
-    alert("UGEEEEEEEEEE")
+    sendServer('https://d232-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok.io/api/predict', param);
+    alert("UGEEEEEEEEEE");
   });
 };
