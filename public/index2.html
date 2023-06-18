@@ -8,12 +8,19 @@
     <div></div>
     <script type="text/javascript">
     const sendfile = function(e) {
-        var img = new Image();    //画像オブジェクト作成
-        img.src = "/nakanoya (31).jpg";  //写真のパスを指定する
-        let up = document.getElementById("up");
-        let file = up.files[0];
+        var img = document.getElementById("image");    //画像オブジェクト作成
+        
+        
         let fd = new FormData();
-        fd.append("imgfile", img);
+        fd.append("inputFile", img);
+
+        fetch('https://a13a-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', {
+            method: 'POST',
+            body: fd
+        })
+
+
+        /*
         let xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function () {
             var result = document.querySelector('div');
@@ -23,6 +30,8 @@
         };
         xmlhttp.open("POST", "https://a13a-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict", true);
         xmlhttp.send(img);
+        */
+        
     }
     let btn = document.getElementById("btn");
     btn.addEventListener("click", sendfile);    
