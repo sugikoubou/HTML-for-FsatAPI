@@ -51,17 +51,19 @@ window.onload = () => {
     };
 
 
-    const imgFile = _convertToFile(test)
+    //const imgFile = _convertToFile(test)
+    const imgFile = new Image();
+    imgFile.src = test;
 
             const fd = new FormData()
             fd.append('file', imgFile)
 
-            console.log(fd.get('image')); // File情報
+            console.log(fd.get('file')); // File情報
 
     const fc = new FormData();
         fc.append("file", test);
 
-     console.log(fc.get('test')); // File情報
+     console.log(fc.get('file')); // File情報
 
         fetch('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', {
             method: 'POST',
