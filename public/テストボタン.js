@@ -9,6 +9,10 @@ window.onload = ()=>{
   Banner.canvas.height = board.height;  // 高さ
 
 
+  const img = new Image();    //画像オブジェクト作成
+  img.src = "/nakanoya (31).jpg";  //写真のパスを指定する
+  
+  Banner.drawImage(img, 0, 0, canvas.width, canvas.height);
 
 
 const button = document.querySelector('input');
@@ -19,12 +23,12 @@ function updateButton() {
   if (button.value === 'クリックしてね') {
     button.value = 'マシンを停止';
 
-    var img = new Image();    //画像オブジェクト作成
-    img.src = "/nakanoya (31).jpg";  //写真のパスを指定する
+    const canvas = board.toDataURL("image/jpg");  // DataURI Schemaが返却される
+
 
     const param  = {
       method: "POST",
-      body: img
+      body: canvas
     };
     
     sendServer('https://7035-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', param);
