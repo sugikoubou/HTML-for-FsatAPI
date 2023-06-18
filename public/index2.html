@@ -8,8 +8,8 @@
     <div></div>
     <script type="text/javascript">
     const sendfile = function(e) {
-        var img = document.getElementById("image");    //画像オブジェクト作成
         
+        var img = document.getElementById("image");    //画像オブジェクト作成
         
         let fd = new FormData();
         fd.append("inputFile", img);
@@ -36,5 +36,6 @@
     let btn = document.getElementById("btn");
     btn.addEventListener("click", sendfile);    
     </script>
+    
 </body>
 </html>
