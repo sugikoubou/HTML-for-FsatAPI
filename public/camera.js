@@ -28,7 +28,7 @@ window.onload = () => {
   });
 
   /**
-   * シャッターボタン
+   * シャッターボタンが押されたらの動作が下
    */
    document.querySelector("#shutter").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
@@ -42,5 +42,8 @@ window.onload = () => {
 
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    const test = ctx.toDataURL("image/png");
+    
+    sendServer()
   });
 };
