@@ -51,9 +51,9 @@ window.onload = () => {
     };
 
 
-    //const imgFile = _convertToFile(test)
-    var imgFile = new Image();
-    imgFile.src = test;
+    const imgFile = _convertToFile(test)
+    //var imgFile = new Image();
+    //imgFile.src = test;
 
             const fd = new FormData()
             fd.append('file', imgFile)
@@ -109,7 +109,7 @@ window.onload = () => {
             for (let i = 0; i < blob.length; i++) {
                 buffer[i] = blob.charCodeAt(i);
             }
-            return new File([buffer.buffer], "file", {type: "image/png"});
+            return new File([buffer.buffer], "example.png", {type: "image/png"});
         }
   
 };
