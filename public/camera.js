@@ -109,7 +109,7 @@ window.onload = () => {
             for (let i = 0; i < blob.length; i++) {
                 buffer[i] = blob.charCodeAt(i);
             }
-            return new File([buffer.buffer], "example", {type: "image/png"});
+            return new File([buffer.buffer], "file", {type: "image/png"});
         }
   
 };
