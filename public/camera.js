@@ -53,13 +53,13 @@ window.onload = () => {
     const fd = new FormData();
         fd.append("file", test);
 
-        fetch('https://7035-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', {
+        fetch('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', {
             method: 'POST',
-            body: test
+            body: fd
             
         })
      
-    //sendServer('https://7035-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', param);
+    //sendServer('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', param);
 
 
     });
