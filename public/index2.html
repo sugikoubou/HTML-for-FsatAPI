@@ -13,10 +13,9 @@
         
         var img = document.getElementById("image");    //画像オブジェクト作成
 
-        const file = makeFile(img);
         
-        let fd = new FormData();
-        fd.append("inputFile", file);
+        const fd = new FormData();
+        fd.append("inputFile", img);
 
         fetch('https://a13a-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', {
             method: 'POST',
