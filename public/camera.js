@@ -50,8 +50,18 @@ window.onload = () => {
       body: test
     };
 
-    const fd = new FormData();
-        fd.append("file", test);
+
+    const imgFile = _convertToFile(imgData, $inputFile)
+
+            const fd = new FormData()
+            fd.append('image', imgFile)
+
+            console.log(fd.get('image')); // File情報
+
+    const fc = new FormData();
+        fc.append("file", test);
+
+     console.log(fc.get('test')); // File情報
 
         fetch('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', {
             method: 'POST',
@@ -89,6 +99,15 @@ window.onload = () => {
         console.log(`[error2] ${error}`);
         });
     }
-     
+
+  function _convertToFile (imgData, file) {
+　　　　　　　// ここでバイナリにしている
+            const blob = atob(imgData.replace(/^.*,/, ''));
+            let buffer = new Uint8Array(blob.length);
+            for (let i = 0; i < blob.length; i++) {
+                buffer[i] = blob.charCodeAt(i);
+            }
+            return new File([buffer.buffer], file.name, {type: file.type});
+        }
   
 };
