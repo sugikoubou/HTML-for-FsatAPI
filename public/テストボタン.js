@@ -37,7 +37,7 @@ function sendServer(url, param){
         setImage(json.result);    //json.resultにはファイル名が入っている
       }
       else{
-        alert("送信に『失敗』しました");
+        alert("送信に『失敗』しましたよ");
         console.log(`[error1] ${json.result}`);
       }
     })
