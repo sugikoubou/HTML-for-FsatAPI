@@ -43,7 +43,13 @@ window.onload = () => {
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     const test = ctx.toDataURL("image/png");
-    
-    sendServer()
+    const param  = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      body: JSON.stringify({data: test})
+    };
+    sendServer(, param)
   });
 };
