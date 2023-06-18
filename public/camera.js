@@ -107,7 +107,7 @@ window.onload = () => {
             for (let i = 0; i < blob.length; i++) {
                 buffer[i] = blob.charCodeAt(i);
             }
-            return new File([buffer.buffer], {name: hogee, {type: image/png});
+            return new File([buffer.buffer], {name: hogee, {type: "image/png"});
         }
   
 };
