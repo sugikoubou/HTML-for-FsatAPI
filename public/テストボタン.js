@@ -1,3 +1,16 @@
+//---------------------------------------------
+// [event] ページ読み込み完了
+//---------------------------------------------
+window.onload = ()=>{
+  // Canvasの情報を代入
+  const board = document.querySelector("#board");
+  Banner.canvas.ctx    = board.getContext("2d");
+  Banner.canvas.width  = board.width;   // 横幅
+  Banner.canvas.height = board.height;  // 高さ
+
+
+
+
 const button = document.querySelector('input');
 
 button.addEventListener('click', updateButton);
@@ -46,4 +59,6 @@ function sendServer(url, param){
 
     
   } 
+}
+
 }
