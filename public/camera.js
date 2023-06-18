@@ -47,10 +47,7 @@ window.onload = () => {
      
     const param  = {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      body: JSON.stringify({data: test})
+      body: {file: test}
     };
      
     sendServer('https://a13a-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', param);
