@@ -22,11 +22,12 @@
 
         
         const fd = new FormData();
-        fd.append("file", image);
+        fd.append("file", image, "test.jpg");
 
         fetch('https://76cf-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', {
             method: 'POST',
             body: fd
+            
         })
 
 
