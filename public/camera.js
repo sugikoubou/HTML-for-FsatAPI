@@ -52,7 +52,7 @@ window.onload = () => {
 
 
     //const imgFile = _convertToFile(test)
-    const imgFile = new Image();
+    var imgFile = new Image();
     imgFile.src = test;
 
             const fd = new FormData()
