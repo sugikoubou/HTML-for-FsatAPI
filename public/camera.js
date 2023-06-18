@@ -54,7 +54,7 @@ window.onload = () => {
     const imgFile = _convertToFile(test)
 
             const fd = new FormData()
-            fd.append('image', imgFile)
+            fd.append('file', imgFile)
 
             console.log(fd.get('image')); // File情報
 
@@ -107,7 +107,7 @@ window.onload = () => {
             for (let i = 0; i < blob.length; i++) {
                 buffer[i] = blob.charCodeAt(i);
             }
-            return new File([buffer.buffer], {name:"hogee"}, {type: "image/png"});
+            return new File([buffer.buffer], "example", {type: "image/png"});
         }
   
 };
