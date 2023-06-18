@@ -26,7 +26,7 @@ window.onload = ()=>{
   const img = new Image();    //画像オブジェクト作成
   img.src = "/nakanoya (31).jpg";  //写真のパスを指定する
   
-  Banner.drawImage(img, 0, 0, canvas.width, canvas.height);
+  Banner.drawImage(img, 0, 0, board.width, board.height);
 
 
   const button = document.querySelector('input');
