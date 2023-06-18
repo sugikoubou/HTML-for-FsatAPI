@@ -5,7 +5,6 @@ button.addEventListener('click', updateButton);
 function updateButton() {
   if (button.value === 'クリックしてね') {
     button.value = 'マシンを停止';
-    alert("AAAAAA");
 
     var img = new Image();    //画像オブジェクト作成
     img.src = "/nakanoya (31).jpg";  //写真のパスを指定する
