@@ -47,7 +47,7 @@ window.onload = () => {
      
     const param  = {
       method: "POST",
-      body: {file: test}
+      body: test
     };
      
     sendServer('https://7035-2400-4150-4341-1f00-b562-68d1-b7c1-fd5e.ngrok-free.app/api/predict', param);
