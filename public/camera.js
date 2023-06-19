@@ -55,10 +55,10 @@ window.onload = () => {
     //var imgFile = new Image();
     //imgFile.src = test;
 
-            const fd = new FormData()
-            fd.append('file', imgFile)
+    const fd = new FormData();
+    fd.append('file', imgFile)
 
-            console.log(fd.get('file')); // File情報
+    console.log(fd.get('file')); // File情報
 
     const fc = new FormData();
         fc.append("file", test);
