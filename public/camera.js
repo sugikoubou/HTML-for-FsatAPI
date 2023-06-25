@@ -46,16 +46,16 @@ window.onload = () => {
 
 
     // canvasをpng
-    const test = canvas.toDataURL("image/png");
+    const file = canvas.toDataURL("image/png");
      
     const param  = {
       method: "POST",
-      body: test
+      body: file
     };
 
 
     //const imgFile = _convertToFile(test);
-    convertToFile(test);
+    convertToFile(file);
      
     //var imgFile = new Image();
     //imgFile.src = test;
@@ -115,7 +115,7 @@ window.onload = () => {
 　　　　　  let data = imgData;
             const filename="sample.png";
             const type="image/png";
-            const bin = atob(data.replace(/^.*,/, ''));
+            const bin = atob(imgData.replace(/^.*,/, ''));
             const buffer = new Uint8Array(bin.length).map((_,x)=>bin.charCodeAt(x));
             const blob = new Blob([buffer.buffer], {type});
             const method="post";
