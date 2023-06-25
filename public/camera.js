@@ -58,6 +58,8 @@ window.onload = () => {
     //var imgFile = new Image();
     //imgFile.src = test;
 
+     
+    /*
     const fd = new FormData();
     fd.append('file', imgFile);
 
@@ -73,6 +75,8 @@ window.onload = () => {
             body: fd
             
         })
+     */
+
      
     //sendServer('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', param);
 
@@ -106,9 +110,9 @@ window.onload = () => {
     }
 
   function _convertToFile (imgData) {
-　　　　　  let data = imgData
+　　　　　  let data = imgData;
             const filename="sample.png";
-            const type=data.match(/image/.+?(?=;)/)[0];
+            const type="image/png";
             const bin = atob(data.replace(/^.*,/, ''));
             const buffer = new Uint8Array(bin.length).map((_,x)=>bin.charCodeAt(x));
             const blob = new Blob([buffer.buffer], {type});
