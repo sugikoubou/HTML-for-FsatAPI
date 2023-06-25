@@ -1,5 +1,3 @@
-import { decode } from './encode.js';
-
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
@@ -108,14 +106,23 @@ window.onload = () => {
     }
 
   function _convertToFile (imgData) {
-　　　　　  //const base64 = require('url-safe-base64')
-            
-　          let data = imgData
-            // デコードデータの取り出し
+　　　　　  let data = imgData
+            const filename="sample.png";
+            const type=data.match(/image/.+?(?=;)/)[0];
+            const bin = atob(data.replace(/^.*,/, ''));
+            const buffer = new Uint8Array(bin.length).map((_,x)=>bin.charCodeAt(x));
+            const blob = new Blob([buffer.buffer], {type});
+            const method="post";
+            const body=new FormData();
+            body.append("test",blob,filename);
+            fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
+　          
+            /* デコードデータの取り出し
             const predata = data.split(',')
 　          const img = base64.decode(predata[1]) 
     
             return new File(img, "example.png", {type: "image/png"});
+            */
         }
   
 };
