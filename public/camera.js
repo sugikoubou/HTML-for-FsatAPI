@@ -1,7 +1,7 @@
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
-  let URL = "https://2888-153-252-13-4.ngrok-free.app/api/predict"
+  let URL = "https://fd9b-153-252-13-4.ngrok-free.app/api/predict"
 
   /** カメラ設定 */
   const constraints = {
