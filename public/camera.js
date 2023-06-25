@@ -44,18 +44,28 @@ window.onload = () => {
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
-
+    
     // canvasをpng
-    const file = canvas.toDataURL("image/png");
-     
+    //const test = canvas.toDataURL("image/png");
+　　let data = canvas.toDataURL("image/png");
+    print(data);
+    const filename="sample.png";
+    const type="image/png";
+    const bin = atob(data.replace(/^.*,/, ''));
+    const buffer = new Uint8Array(bin.length).map((_,x)=>bin.charCodeAt(x));
+    const blob = new Blob([buffer.buffer], {type});
+    const method="post";
+    const body=new FormData();
+    body.append("file",blob,filename);
+    fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
+
     const param  = {
       method: "POST",
-      body: file
+      body: test
     };
 
 
     //const imgFile = _convertToFile(test);
-    _convertToFile(file);
      
     //var imgFile = new Image();
     //imgFile.src = test;
@@ -66,11 +76,6 @@ window.onload = () => {
     fd.append('file', imgFile);
 
     console.log(fd.get('file')); // File情報
-
-    const fc = new FormData();
-        fc.append("file", test);
-
-     console.log(fc.get('file')); // File情報
 
         fetch(URL, {
             method: 'POST',
@@ -115,12 +120,12 @@ window.onload = () => {
 　　　　　  let data = imgData;
             const filename="sample.png";
             const type="image/png";
-            const bin = atob(imgData.replace(/^.*,/, ''));
+            const bin = atob(data.replace(/^.*,/, ''));
             const buffer = new Uint8Array(bin.length).map((_,x)=>bin.charCodeAt(x));
             const blob = new Blob([buffer.buffer], {type});
             const method="post";
             const body=new FormData();
-            body.append("test",blob,filename);
+            body.append("file",blob,filename);
             fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
 　          
             /* デコードデータの取り出し
