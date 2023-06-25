@@ -55,7 +55,7 @@ window.onload = () => {
 
 
     //const imgFile = _convertToFile(test);
-    convertToFile(file);
+    _convertToFile(file);
      
     //var imgFile = new Image();
     //imgFile.src = test;
