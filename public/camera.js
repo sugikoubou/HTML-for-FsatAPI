@@ -107,7 +107,7 @@ window.onload = () => {
 
   function _convertToFile (imgData) {
 　　　　　  //const base64 = require('url-safe-base64')
-            import decode from '/encode.js';
+            import decode from './encode.js';
 　          let data = imgData
             // デコードデータの取り出し
             const predata = data.split(',')
