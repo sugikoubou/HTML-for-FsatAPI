@@ -43,10 +43,8 @@ window.onload = () => {
 
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-    
+     
     // canvasをpng
-    //const test = canvas.toDataURL("image/png");
 　　let data = canvas.toDataURL("image/png");
     alert(data);
     const filename="sample.png";
@@ -59,62 +57,7 @@ window.onload = () => {
     body.append("file",blob,filename);
     fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
 
-    const param  = {
-      method: "POST",
-      body: test
-    };
-
-
-    //const imgFile = _convertToFile(test);
-     
-    //var imgFile = new Image();
-    //imgFile.src = test;
-
-     
-    /*
-    const fd = new FormData();
-    fd.append('file', imgFile);
-
-    console.log(fd.get('file')); // File情報
-
-        fetch(URL, {
-            method: 'POST',
-            body: fd
-            
-        })
-     */
-
-     
-    //sendServer('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', param);
-
-
     });
-/**
- * サーバへJSON送信
- *
- * @param url   {string} 送信先URL
- * @param param {object} fetchオプション
- */
-  function sendServer(url, param){
-    fetch(url, param)
-      .then((response)=>{
-        return response.json();
-      })
-      .then((json)=>{
-        if(json.status){
-          alert("送信に『成功』しました");
-          setImage(json.result);    //json.resultにはファイル名が入っている
-        }
-        else{
-          alert("送信に『失敗』しましたよ");
-          console.log(`[error1] ${json.result}`);
-          }
-      })
-      .catch((error)=>{
-        alert("送信に『失敗』しました");
-        console.log(`[error2] ${error}`);
-        });
-    }
 
   function _convertToFile (imgData) {
 　　　　　  let data = imgData;
@@ -127,13 +70,6 @@ window.onload = () => {
             const body=new FormData();
             body.append("file",blob,filename);
             fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
-　          
-            /* デコードデータの取り出し
-            const predata = data.split(',')
-　          const img = base64.decode(predata[1]) 
-    
-            return new File(img, "example.png", {type: "image/png"});
-            */
         }
   
 };
