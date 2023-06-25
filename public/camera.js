@@ -42,7 +42,9 @@ window.onload = () => {
 
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-     
+
+
+    // canvasをpng
     const test = canvas.toDataURL("image/png");
      
     const param  = {
@@ -103,13 +105,13 @@ window.onload = () => {
     }
 
   function _convertToFile (imgData) {
-　　　　　　　// ここでバイナリにしている
-            const blob = atob(imgData.replace(/^.*,/, ''));
-            let buffer = new Uint8Array(blob.length);
-            for (let i = 0; i < blob.length; i++) {
-                buffer[i] = blob.charCodeAt(i);
-            }
-            return new File([buffer.buffer], "example.png", {type: "image/png"});
+　　　　　  const base64 = require('url-safe-base64')
+　          let data = imgData
+            // デコードデータの取り出し
+            const predata = data.split(',')
+　          const img = base64.decode(predata[1]) 
+    
+            return new File(img, "example.png", {type: "image/png"});
         }
   
 };
