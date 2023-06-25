@@ -48,7 +48,7 @@ window.onload = () => {
     // canvasをpng
     //const test = canvas.toDataURL("image/png");
 　　let data = canvas.toDataURL("image/png");
-    print(data);
+    alert(data);
     const filename="sample.png";
     const type="image/png";
     const bin = atob(data.replace(/^.*,/, ''));
