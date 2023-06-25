@@ -56,12 +56,12 @@ window.onload = () => {
     };
 
 
-    const imgFile = _convertToFile(test)
+    const imgFile = _convertToFile(test);
     //var imgFile = new Image();
     //imgFile.src = test;
 
     const fd = new FormData();
-    fd.append('file', imgFile)
+    fd.append('file', imgFile);
 
     console.log(fd.get('file')); // File情報
 
