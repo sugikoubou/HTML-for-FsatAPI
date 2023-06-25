@@ -1,6 +1,7 @@
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
+  let URL = "https://2888-153-252-13-4.ngrok-free.app/api/predict"
 
   /** カメラ設定 */
   const constraints = {
@@ -67,7 +68,7 @@ window.onload = () => {
 
      console.log(fc.get('file')); // File情報
 
-        fetch('https://c739-2400-4150-4341-1f00-31aa-6fac-bb85-b398.ngrok-free.app/api/predict', {
+        fetch(URL, {
             method: 'POST',
             body: fd
             
