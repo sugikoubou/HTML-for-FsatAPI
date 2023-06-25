@@ -1,4 +1,4 @@
-import decode from './encode.js';
+import { decode } from './encode.js';
 
 window.onload = () => {
   const video  = document.querySelector("#camera");
