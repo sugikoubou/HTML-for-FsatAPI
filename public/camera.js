@@ -56,11 +56,6 @@ window.onload = () => {
     const body=new FormData();
     body.append("file",blob,filename);
     fetch(URL,{method,body}).then(res=>res.text()).then(console.log)
-    .then((res)=>{
-      return( res.json() )
-    .then((json)=>{
-        // 通信が成功した際の処理
-      })});
 
     });
 
