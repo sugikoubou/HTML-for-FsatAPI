@@ -55,7 +55,7 @@ window.onload = () => {
     const method="post";
     const body=new FormData();
     body.append("file",blob,filename);
-    fetch(URL,{method,body}).then(res=>res.text()).then(alert.log)
+    fetch(URL,{method,body}).then(res=>res.text()).then(console.log)
 
     });
 
