@@ -58,11 +58,9 @@ window.onload = () => {
     //.then(res=>res.json()).then(console.log)
     fetch(URL,{method,body})
     .then(res=>
-      res.json()
-      alert(res.json());
-         )
+      res.json()).then(get_func)
       
-      .then(console.log)
+      //.then(console.log)
 
   
 
@@ -80,5 +78,22 @@ window.onload = () => {
             body.append("file",blob,filename);
             fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
         }
+
+  function get_func(url) {
+      fetch(url)
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(text) {
+        let view = document.getElementById("view")
+        view.textContent = ""
+        // 取得テキストを一行ごとにループ（ただ改行して表示しているだけ）
+        text.split("\n").forEach((value) => {
+          view.insertAdjacentHTML('beforeend', value);
+          view.insertAdjacentHTML('beforeend', "<br>");
+        })
+      });
+    }
+
   
 };
