@@ -63,7 +63,6 @@ window.onload = () => {
     } else {
       return Promise.reject(json.error);
     }
-  };
 
 });
 
