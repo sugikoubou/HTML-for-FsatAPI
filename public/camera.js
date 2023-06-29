@@ -3,6 +3,23 @@ window.onload = () => {
   const canvas = document.querySelector("#picture");
   let URL = "https://cdae-2400-4150-4341-1f00-24b4-1ef5-342a-3462.ngrok-free.app/api/predict"
 
+
+  function get_func(url) {
+      fetch(url)
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(text) {
+        let view = document.getElementById("view")
+        view.textContent = ""
+        // 取得テキストを一行ごとにループ（ただ改行して表示しているだけ）
+        text.split("\n").forEach((value) => {
+          view.insertAdjacentHTML('beforeend', value);
+          view.insertAdjacentHTML('beforeend', "<br>");
+        })
+      });
+    }
+  
   /** カメラ設定 */
   const constraints = {
     audio: false,
@@ -79,21 +96,7 @@ window.onload = () => {
             fetch(URL,{method,body}).then(res=>res.text()).then(console.log);
         }
 
-  function get_func(url) {
-      fetch(url)
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(text) {
-        let view = document.getElementById("view")
-        view.textContent = ""
-        // 取得テキストを一行ごとにループ（ただ改行して表示しているだけ）
-        text.split("\n").forEach((value) => {
-          view.insertAdjacentHTML('beforeend', value);
-          view.insertAdjacentHTML('beforeend', "<br>");
-        })
-      });
-    }
+  
 
   
 };
