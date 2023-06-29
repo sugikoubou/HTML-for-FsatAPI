@@ -5,7 +5,10 @@ window.onload = () => {
 
 
   function get_func(url) {
-      fetch(url)
+    setTimeout( () => {
+      fetch(url);    // 0.5秒後にカメラ再開
+    }, 500);
+      
       .then(function(response) {
         return response.text();
       })
