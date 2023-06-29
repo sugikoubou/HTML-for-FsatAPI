@@ -57,7 +57,15 @@ window.onload = () => {
     body.append("file",blob,filename);
     fetch(URL,{method,body}).then(res=>res.text()).then(console.log)
 
-    });
+    const json = response.json();
+    if (response.status == 200) {
+      return Promise.resolve(json);
+    } else {
+      return Promise.reject(json.error);
+    }
+  };
+
+});
 
   function _convertToFile (imgData) {
 　　　　　  let data = imgData;
