@@ -56,13 +56,13 @@ window.onload = () => {
     const body=new FormData();
     body.append("file",blob,filename);
     //.then(res=>res.json()).then(console.log)
-    const response = fetch(URL,{method,body})
-    const json = response.json();
-    if (response.status == 200) {
-      return Promise.resolve(json);
-    } else {
-      return Promise.reject(json.error);
-    }
+    fetch(URL,{method,body})
+    .then(res=>
+      res.json()
+      alert(res.json());
+         )
+      
+      .then(console.log)
 
   
 
