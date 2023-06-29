@@ -55,8 +55,14 @@ window.onload = () => {
     const method="post";
     const body=new FormData();
     body.append("file",blob,filename);
-    fetch(URL,{method,body}).then(res=>res.json()).then(console.log);
-    alert(res.json());
+    //.then(res=>res.json()).then(console.log)
+    const response = await fetch(URL,{method,body})
+    const json = response.json();
+    if (response.status == 200) {
+      return Promise.resolve(json);
+    } else {
+      return Promise.reject(json.error);
+    }
 
   
 
