@@ -57,8 +57,10 @@ window.onload = () => {
     var info = new Image();
     info.src = imgs[0];
     ctx.drawImage(info, 0, 0, canvas.width/4, canvas.height/4);
+    /*
     info.src = imgs[3];
     ctx.drawImage(info, 600, 600, canvas.width/4, canvas.height/4);
+    */
     
 
   });
