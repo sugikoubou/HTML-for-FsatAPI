@@ -2,30 +2,17 @@ window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
   let URL = "https://93d0-2400-4150-4341-1f00-940b-675b-8e2e-40c7.ngrok-free.app/api/predict"
-
+  const overlay = document.getElementById('overlay');
   var SZ = 250;
 
-  document.addEventListener('DOMContentLoaded', function(){
+  const overlayInner = document.getElementById('overlay-inner');
+  overlayInner.addEventListener('click', stopEvent, false);
   
-    // オーバレイを開閉する関数
-    const overlay = document.getElementById('overlay');
-    function overlayToggle() {
-      overlay.classList.toggle('overlay-on');
-    }
-    // 指定した要素に対して上記関数を実行するクリックイベントを設定
-    const clickArea = document.getElementsByClassName('overlay-event');
-    for(let i = 0; i < clickArea.length; i++) {
-      clickArea[i].addEventListener('click', overlayToggle, false);
-    }
+
   
-    // イベントに対してバブリングを停止
-    function stopEvent(event) {
-      event.stopPropagation();
-    }
-    const overlayInner = document.getElementById('overlay-inner');
-    overlayInner.addEventListener('click', stopEvent, false);
-  
-  }, false);
+    
+    
+ 
   
   
   /** カメラ設定 */
@@ -166,7 +153,22 @@ window.onload = () => {
     if (hit) { overlayToggle }
       
  
-}
+  }
+  
+  // オーバレイを開閉する関数
+  function overlayToggle() {
+      overlay.classList.toggle('overlay-on');
+  }
+    // 指定した要素に対して上記関数を実行するクリックイベントを設定
+    const clickArea = document.getElementsByClassName('overlay-event');
+    for(let i = 0; i < clickArea.length; i++) {
+      clickArea[i].addEventListener('click', overlayToggle, false);
+    }
+  
+    // イベントに対してバブリングを停止
+  function stopEvent(event) {
+      event.stopPropagation();
+  }
 
   
 };
