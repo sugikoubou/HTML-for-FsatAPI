@@ -32,8 +32,8 @@ h1 {
   animated-text 1.0s steps(17, end) 1s 1 normal both
 }
 
-.btn,
-a.btn,
+/*.btn,a.btn*/
+
 button.btn {
   font-size: 1.6rem;
   font-weight: 700;
@@ -55,7 +55,9 @@ button.btn {
   color: #212529;
   border-radius: 0.5rem;
 }
-
+button.btn:hover {
+color: #ffffff;
+}
 
 
 /* text animation */
