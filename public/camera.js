@@ -3,6 +3,8 @@ window.onload = () => {
   const canvas = document.querySelector("#picture");
   let URL = "https://93d0-2400-4150-4341-1f00-940b-675b-8e2e-40c7.ngrok-free.app/api/predict"
 
+  var SZ = 250;
+
 
   
   
@@ -57,14 +59,14 @@ window.onload = () => {
     var info1 = new Image();
     info1.src = imgs[0];
     info1.onload = () => {
-      ctx.drawImage(info1, 0, 0, canvas.width/4, canvas.height/4);
+      ctx.drawImage(info1, 0, 0, SZ, SZ);
     };
 
     
     var info4 = new Image();
     info4.src = imgs[3];
     info4.onload = () => {
-      ctx.drawImage(info4, 600, 600, canvas.width/4, canvas.height/4);
+      ctx.drawImage(info4, 750-SZ, 750-SZ, SZ, SZ);
     };
 
     canvas.addEventListener("click", Aim);
