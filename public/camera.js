@@ -120,7 +120,6 @@ window.onload = () => {
       y: e.clientY - rect.top
     };
     
-    //クリックした座標が画像の上にあるか判定（丸いボタンなので四隅は無いけどクリックしたことにする）
     var hit =
         (0 <= point.x && point.x <= 200) 
      && (0 <= point.y && point.y <= 200)
