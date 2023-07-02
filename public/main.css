@@ -11,11 +11,6 @@ body {
 
 .boda {border: 1px solid gray;}
 
-.shiro {
-  padding:  20px;                 /* 余白指定 */
-  color: #fff;
-}
-
 #hello-wrapper {
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
