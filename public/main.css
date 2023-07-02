@@ -11,6 +11,8 @@ body {
 
 .boda {border: thick double gray;}
 
+.boda1 {border: 2px thick double pink;}
+
 #hello-wrapper {
   color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
