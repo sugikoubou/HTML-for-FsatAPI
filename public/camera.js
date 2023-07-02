@@ -59,14 +59,27 @@ window.onload = () => {
     var info1 = new Image();
     info1.src = imgs[0];
     info1.onload = () => {
-      ctx.drawImage(info1, 0, 0, SZ, SZ);
+      let g = ctx.createLinearGradient(0, 0, 100, 100);
+      g.addColorStop(0.0, 'red');
+      g.addColorStop(0.5, 'blue');
+      g.addColorStop(1.0, 'yellow');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, SZ+4, SZ+4);
+      ctx.drawImage(info1, 2, 2, SZ, SZ);
+      
     };
 
     
     var info4 = new Image();
     info4.src = imgs[3];
     info4.onload = () => {
-      ctx.drawImage(info4, 790-SZ, 790-SZ, SZ, SZ);
+      let g = ctx.createLinearGradient(0, 0, 100, 100);
+      g.addColorStop(0.0, 'red');
+      g.addColorStop(0.5, 'blue');
+      g.addColorStop(1.0, 'yellow');
+      ctx.fillStyle = g;
+      ctx.fillRect(488, 488, 354, 354);
+      ctx.drawImage(info4, 790-SZ, 790-SZ, SZ+50, SZ+50);
     };
 
     canvas.addEventListener("click", Aim);
