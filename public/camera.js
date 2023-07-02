@@ -73,7 +73,7 @@ window.onload = () => {
     var info4 = new Image();
     info4.src = imgs[3];
     info4.onload = () => {
-      let g = ctx.createLinearGradient(487, 487, 306, 306);
+      let g = ctx.createLinearGradient(487, 487, 800, 800);
       g.addColorStop(0.0, 'red');
       g.addColorStop(0.5, 'blue');
       g.addColorStop(1.0, 'yellow');
