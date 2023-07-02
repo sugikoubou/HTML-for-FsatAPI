@@ -78,8 +78,8 @@ window.onload = () => {
       g.addColorStop(0.5, 'blue');
       g.addColorStop(1.0, 'yellow');
       ctx.fillStyle = g;
-      ctx.fillRect(488, 488, 354, 354);
-      ctx.drawImage(info4, 790-SZ, 790-SZ, SZ+50, SZ+50);
+      ctx.fillRect(487, 487, 306, 306);
+      ctx.drawImage(info4, 490, 490, SZ+50, SZ+50);
     };
 
     canvas.addEventListener("click", Aim);
