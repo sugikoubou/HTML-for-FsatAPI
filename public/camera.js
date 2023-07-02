@@ -53,7 +53,7 @@ window.onload = () => {
 
   document.querySelector("#result").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
-    const imgs = ['info/1/syoki', 'info/2/syoki', 'info/3/syoki','info/4/syoki'];
+    const imgs = ['info/1/syoki.jpg', 'info/2/syoki', 'info/3/syoki','info/4/syoki'];
     var info = new Image();
     info.src = imgs[0];
     ctx.drawImage(info, 0, 0, canvas.width/4, canvas.height/4);
