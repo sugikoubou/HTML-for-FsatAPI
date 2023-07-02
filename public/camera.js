@@ -53,7 +53,7 @@ window.onload = () => {
 
   document.querySelector("#result").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
-    const imgs = ['info/1/syoki.jpg', 'info/2/syoki.jpg', 'info/3/syoki.jpg','https://tblg.k-img.com/restaurant/images/Rvw/180968/640x640_rect_150a2a04531912b3b9067794ce5866e4.jpg'];
+    const imgs = ['info/1/syouki.jpg', 'info/2/syouki.jpg', 'info/3/syouki.jpg','https://tblg.k-img.com/restaurant/images/Rvw/180968/640x640_rect_150a2a04531912b3b9067794ce5866e4.jpg'];
     var info = new Image();
     info.src = imgs[0];
     ctx.drawImage(info, 0, 0, canvas.width/4, canvas.height/4);
