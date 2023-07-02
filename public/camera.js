@@ -48,7 +48,7 @@ window.onload = () => {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
      
     // canvasをpng
-　　let data = canvas.toDataURL("image/png");
+　　const data = canvas.toDataURL("image/png");
     
     POST();
 
