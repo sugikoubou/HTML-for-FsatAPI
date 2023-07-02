@@ -123,7 +123,7 @@ window.onload = () => {
         (0 <= point.x && point.x <= 200) 
      && (0 <= point.y && point.y <= 200)
 
-    if (hit) { window.alert('pushed!'); }
+    if (hit) { window.open('https://tabelog.com/osaka/A2701/A270302/27131021/dtlphotolst/1/smp2/', '_blank', 'noreferrer'); }
  
 }
 
