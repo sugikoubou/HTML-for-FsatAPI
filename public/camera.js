@@ -31,15 +31,12 @@ window.onload = () => {
     console.log(err.name + ": " + err.message);
   });
 
-  /**
-   * シャッターボタンが押されたらの動作が下
-   */
+  //シャッターボタンが押されたらの動作が下
    document.querySelector("#shutter").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
 
     // 演出的な目的で一度映像を止めてSEを再生する
     video.pause();  // 映像を停止
-   
     setTimeout( () => {
       video.play();    // 0.5秒後にカメラ再開
     }, 500);
@@ -54,6 +51,15 @@ window.onload = () => {
 
 });
 
+  document.querySelector("#result").addEventListener("click", () => {
+    const imgs = ['info/1/syoki', 'info/2/syoki', 'info/3/syoki','info/4/syoki'];
+    var info = new Image();
+    info.src = imgs[0];
+    ctx.drawImage(info, 0, 0, canvas,widgh /4, canvas.height /4);
+    
+
+  });
+
   function POST(imgNE) {
     const data = imgNE
 　　const filename="sample.png";
@@ -66,8 +72,8 @@ window.onload = () => {
     body.append("file",blob,filename);
     //.then(res=>res.json()).then(console.log)
     fetch(URL,{method,body})
-    .then(res=>
-      res.json()).then(get_func)
+    .then(res=>res.json())
+      .then(get_func)
       
       //.then(console.log)
     
