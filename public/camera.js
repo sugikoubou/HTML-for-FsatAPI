@@ -53,7 +53,7 @@ window.onload = () => {
 
 });
 
-  document.querySelector("#result").addEventListener("click", () => {
+  document.getElementById("#result").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
     const imgs = ['info/1/syouki.jpg', 'info/2/syouki.jpg', 'info/3/syouki.jpg','https://tblg.k-img.com/restaurant/images/Rvw/180968/640x640_rect_150a2a04531912b3b9067794ce5866e4.jpg'];
     var info1 = new Image();
