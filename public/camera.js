@@ -66,7 +66,7 @@ window.onload = () => {
     var info4 = new Image();
     info4.src = imgs[3];
     info4.onload = () => {
-      ctx.drawImage(info4, 750-SZ, 750-SZ, SZ, SZ);
+      ctx.drawImage(info4, 790-SZ, 790-SZ, SZ, SZ);
     };
 
     canvas.addEventListener("click", Aim);
