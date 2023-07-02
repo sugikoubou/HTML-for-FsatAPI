@@ -67,7 +67,7 @@ window.onload = () => {
       ctx.drawImage(info4, 600, 600, canvas.width/4, canvas.height/4);
     };
 
-    canvas.addEventListener("click", hoge);
+    canvas.addEventListener("click", Aim);
 
   });
 
