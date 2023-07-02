@@ -7,12 +7,9 @@ body {
   font-weight: 400;
 }
 
-.bg_1 {
-    border: 1px solid gray;
-    /*background-color: white;   背景色指定 */
-    text-align:  center;        /* 中央寄せ */
-  
-}
+
+
+.boda {border: 1px solid gray;}
 
 .shiro {
   padding:  20px;                 /* 余白指定 */
