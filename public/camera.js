@@ -50,12 +50,12 @@ window.onload = () => {
     // canvasをpng
 　　const data = canvas.toDataURL("image/png");
     
-    POST();
+    POST(data);
 
 });
 
-  function POST() {
-    
+  function POST(imgNE) {
+    const data = imgNE
 　　const filename="sample.png";
     const type="image/png";
     const bin = atob(data.replace(/^.*,/, ''));
