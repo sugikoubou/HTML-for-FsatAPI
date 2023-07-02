@@ -66,7 +66,8 @@ window.onload = () => {
     info4.onload = () => {
       ctx.drawImage(info4, 600, 600, canvas.width/4, canvas.height/4);
     };
-    
+
+    canvas.addEventListener("click", hoge);
 
   });
 
@@ -107,6 +108,24 @@ window.onload = () => {
         })
       });
     }
+
+  function Aim(e) {
+  
+    //クリックされた場所の座標をcanvas内座標に変換offsetX, offsetYでもいいかもしれない
+    var rect = canvas.getBoundingClientRect();
+    var point = {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    };
+    
+    //クリックした座標が画像の上にあるか判定（丸いボタンなので四隅は無いけどクリックしたことにする）
+    var hit =
+        (0 <= point.x && point.x <= 200) 
+     && (0 <= point.y && point.y <= 200)
+
+    if (hit) { window.alert('pushed!'); }
+ 
+}
 
   
 };
