@@ -76,7 +76,7 @@ window.onload = () => {
 
       ctx.font = '24px serif';
       ctx.fillStyle = 'White';
-      ctx.strokeText('詳しく見る👆', 60, 230);
+      ctx.fillText('詳しく見る👆', 60, 230);
       
     };
 
