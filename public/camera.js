@@ -75,6 +75,7 @@ window.onload = () => {
       ctx.drawImage(info1, 2, 2, SZ, SZ);
 
       ctx.font = '28px serif';
+      ctx.fillStyle = 'black';
       ctx.fillText('詳しく見る👆', 60, 230);
       
     };
