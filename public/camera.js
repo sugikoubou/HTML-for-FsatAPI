@@ -75,7 +75,7 @@ window.onload = () => {
       ctx.drawImage(info1, 2, 2, SZ, SZ);
 
       ctx.font = '24px arial black';
-      context001.fillStyle = '#ffffff';
+      ctx.fillStyle = '#ffffff';
       ctx.strokeText('詳しく見る👆', 60, 230);
       
     };
