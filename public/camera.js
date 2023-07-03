@@ -150,7 +150,7 @@ window.onload = () => {
       (490 <= point.x && point.x <= 800) 
      && (490 <= point.y && point.y <= 800)
 
-    if (hit) { overlayToggle() }
+    if (hit2) { overlayToggle() }
       
  
   }
