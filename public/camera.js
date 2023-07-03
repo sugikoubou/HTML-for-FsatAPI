@@ -74,8 +74,8 @@ window.onload = () => {
       ctx.fillRect(0, 0, SZ+4, SZ+4);
       ctx.drawImage(info1, 2, 2, SZ, SZ);
 
-      ctx.font = '24px Comic Sans';
-      ctx.fillStyle = '#ffffff';
+      ctx.font = '24px serif';
+      ctx.fillStyle = 'White';
       ctx.strokeText('詳しく見る👆', 60, 230);
       
     };
