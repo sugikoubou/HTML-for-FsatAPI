@@ -76,7 +76,7 @@ window.onload = () => {
 
       ctx.font = 'bold 28px serif';
       ctx.fillStyle = 'black';
-      ctx.fillText('詳しく見る👆', 60, 230);
+      ctx.fillText('more info', 60, 230);
       
     };
 
