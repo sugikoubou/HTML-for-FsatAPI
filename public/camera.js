@@ -74,9 +74,6 @@ window.onload = () => {
       ctx.fillRect(0, 0, SZ+4, SZ+4);
       ctx.drawImage(info1, 2, 2, SZ, SZ);
 
-      ctx.font = 'bold 36px serif';
-      ctx.fillStyle = 'black';
-      ctx.fillText('more info', 60, 230);
       
     };
 
