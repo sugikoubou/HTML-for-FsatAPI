@@ -1,7 +1,7 @@
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
-  let URL = "https://93d0-2400-4150-4341-1f00-940b-675b-8e2e-40c7.ngrok-free.app/api/predict"
+  let URL = "https://21b3-158-217-104-44.ngrok-free.app/api/predict"
   const overlay = document.getElementById('overlay');
   var SZ = 250;
 
