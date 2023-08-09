@@ -115,7 +115,7 @@ window.onload = () => {
   　}
 
   function check(name) {
-    if(name === koiwa){
+    if(name === 'koiwa'){
       console.log('ここは小岩');
     } 
   
