@@ -110,7 +110,7 @@ window.onload = () => {
     //.then(res=>res.json()).then(console.log)
     fetch(URL,{method,body})
     .then(res=>res.json())
-      //.then(get_func)
+      .then(get_func)
       
       .then(console.log)
     
