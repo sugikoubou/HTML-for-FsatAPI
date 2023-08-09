@@ -1,7 +1,7 @@
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
-  let URL = "https://21b3-158-217-104-44.ngrok-free.app/api/predict"
+  let URL = "https://23b2-158-217-104-44.ngrok-free.app/api/predict"
   const overlay = document.getElementById('overlay');
   var SZ = 250;
 
@@ -116,20 +116,17 @@ window.onload = () => {
     
   　}
 
+  function check(name) {
+    if(name === koiwa){
+      console.log('ここは小岩');
+  
+  
+  }
+
   function get_func(url) {
       fetch(url)
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(text) {
-        let view = document.getElementById("view")
-        view.textContent = ""
-        // 取得テキストを一行ごとにループ（ただ改行して表示しているだけ）
-        text.split("\n").forEach((value) => {
-          view.insertAdjacentHTML('beforeend', value);
-          view.insertAdjacentHTML('beforeend', "<br>");
-        })
-      });
+      .then((response) => response.json())
+      .then((data) => console.log(data));
     }
 
   function Aim(e) {
