@@ -58,27 +58,23 @@
 	  
   </head>
   <body>
- 	<div id="hello-wrapper">   
-	
-    	<h1 class="typewriter">店舗推測を送信された画像から行います</h1>
-
-
     	<video id="camera" class="boda" width="600" height="600"></video>
 		
 		<div class="uptop">
  		<button type="button" class="btn btn-warning" id="shutter">撮影</button>
 		</div>
 		
-	<img src="sita.png" width="150" height="150">
+	<!-- <img src="sita.png" width="150" height="150">
+	-->
 	<div class="arrow"></div>
 		
 	<style>	
 	.arrow {
   	position: relative;
   	display: inline-block;
-  	width: 48px;
-  	height: 48px;
-  	background-color: #1E88E5;
+  	width: 150px;
+  	height: 150px;
+  	background-color: #EDA321;
   	clip-path: polygon(0 33%, 50% 33%, 50% 15%, 100% 50%, 50% 85%, 50% 67%, 0 67%);
 	transform:rotate(90deg);
 	}
@@ -86,16 +82,15 @@
 		
 	<canvas id="picture" class="boda1" width="800" height="800"></canvas>
 	
-	<div class="test">
-	<button type="button" class="btn btn-info btn-lg" id="result">情報提示</button> 
-	</div>
-	<style>
-	.test {
-    		position: relative;
-    		margin-top: -30px;
-	}    
-		
-        </div>
+		<div class="test">
+		<button type="button" class="btn btn-info btn-lg" id="result">情報提示</button> 
+		</div>
+		<style>
+		.test {
+    			position: relative;
+    			margin-top: -30px;
+		}
+		</style>
 
 	<div id="overlay" class="overlay-event">
   	<div class="flex">
