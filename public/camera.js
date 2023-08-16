@@ -1,4 +1,4 @@
-import resCheck from 'IfProcess';
+import resCheck from './IfProcess';
 
 window.onload = () => {
   const video  = document.querySelector("#camera");
