@@ -11,18 +11,18 @@ window.onload = () => {
   overlayInner.addEventListener('click', stopEvent, false);
   
   /** カメラ設定 */
-  var hoge = video.video;
+  var hoge = document.getElementByClassName("boda1");
   const constraints = {
     audio: false,
     video: {
-      width: ,
-      height: ,
+      width: hoge.offsetWidth -200,
+      height: 800px,
       facingMode: "environment"   // フロントカメラを利用する = user
       // facingMode: { exact: "environment" or user}  // リアカメラを利用する場合
     }
   };
 
-  console.log(video.width);
+  console.log(hoge.offsetWidth);
 
   /**
    * カメラを<video>と同期
