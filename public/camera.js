@@ -1,3 +1,5 @@
+import resCheck from 'IfProcess';
+
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
@@ -110,7 +112,7 @@ window.onload = () => {
     //.then(res=>res.json()).then(console.log)
     fetch(URL,{method,body})
     .then(res=>res.json())
-      .then(check)
+      .then(resCheck)
     
   　}
 
@@ -118,7 +120,6 @@ window.onload = () => {
     if(name === 'koiwa'){
       console.log('ここは小岩');
     } 
-  
   }
 
   function get_func(url) {
@@ -127,6 +128,26 @@ window.onload = () => {
       .then((data) => console.log(data));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   function Aim(e) {
   
     //クリックされた場所の座標をcanvas内座標に変換offsetX, offsetYでもいいかもしれない
