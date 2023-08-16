@@ -13,8 +13,12 @@ h1 {
   font-weight: bold;
 }
 
-.boda {border: thick double gray;}
+.uptop {
+  margin-top: -50px
 
+}
+
+.boda {border: thick double gray;}
 .boda1 {border: thick double pink;}
 
 #hello-wrapper {
