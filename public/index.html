@@ -11,11 +11,11 @@
     <link rel="stylesheet" type="text/css" href="/main.css">
     <link rel="icon" href="/sugi.ico" />
 
-    <style>
-    .test {
-    	position: relative;
-    	margin-top: -30px;
-    }    
+<style>
+.test {
+    position: relative;
+    margin-top: -30px;
+}    
 
 	    
 #overlay{
@@ -54,11 +54,14 @@
   background-color:#eee;
   border:solid #ccc 1px;
   cursor: pointer;
-}
-	    
-    </style>
+} 
+</style>
 
-    
+
+
+
+
+	  
   </head>
   <body>
  	<div id="hello-wrapper">   
@@ -69,7 +72,9 @@
     	<video id="camera" class="boda" width="600" height="600"></video>
 		
 	<form>
- 	<button type="button" class="btn btn-warning" id="shutter">シャッター</button> 
+		<div class="uptop">
+ 		<button type="button" class="btn btn-warning" id="shutter">シャッター</button>
+		</div>
 	</form>	
 	<div class"test">
 	<img src="sita.png" width="150" height="150">
@@ -79,8 +84,8 @@
 	
 	<div class="test">
 	<button type="button" class="btn btn-info btn-lg" id="result">情報提示</button> 
-	
 	</div>
+		
         </div>
 
 	<div id="overlay" class="overlay-event">
