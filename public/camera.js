@@ -18,7 +18,7 @@ window.onload = () => {
   
   
   /** カメラ設定 */
-  let hoge = document.getElementsByName("video").width
+  let hoge = document.getElementsByID("camera").width
   const constraints = {
     audio: false,
     video: {
@@ -29,7 +29,7 @@ window.onload = () => {
     }
   };
 
-  console.log(document.getElementsByName("video").width);
+  console.log(video.width);
 
   /**
    * カメラを<video>と同期
