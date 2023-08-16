@@ -10,20 +10,13 @@ window.onload = () => {
   const overlayInner = document.getElementById('overlay-inner');
   overlayInner.addEventListener('click', stopEvent, false);
   
-
-  
-    
-    
- 
-  
-  
   /** カメラ設定 */
-  let hoge = document.getElementsByID("camera").width
+  var hoge = video.video;
   const constraints = {
     audio: false,
     video: {
-      width: hoge - 200,
-      height: hoge -200,
+      width: ,
+      height: ,
       facingMode: "environment"   // フロントカメラを利用する = user
       // facingMode: { exact: "environment" or user}  // リアカメラを利用する場合
     }
