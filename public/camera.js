@@ -16,7 +16,7 @@ window.onload = () => {
     audio: false,
     video: {
       width: hoge.offsetWidth -200,
-      height: 800px,
+      height: 800,
       facingMode: "environment"   // フロントカメラを利用する = user
       // facingMode: { exact: "environment" or user}  // リアカメラを利用する場合
     }
