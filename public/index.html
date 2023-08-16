@@ -12,12 +12,6 @@
     <link rel="icon" href="/sugi.ico" />
 
 <style>
-.test {
-    position: relative;
-    margin-top: -30px;
-}    
-
-	    
 #overlay{
   position: fixed;
   top:0;
@@ -76,12 +70,29 @@
 		</div>
 		
 	<img src="sita.png" width="150" height="150">
+	<div class="arrow"></div>
+		
+	<style>	
+	.arrow {
+  	position: relative;
+  	display: inline-block;
+  	width: 48px;
+  	height: 48px;
+  	background-color: #1E88E5;
+  	clip-path: polygon(0 33%, 50% 33%, 50% 15%, 100% 50%, 50% 85%, 50% 67%, 0 67%);
+	}
+	</style>
 		
 	<canvas id="picture" class="boda1" width="800" height="800"></canvas>
 	
 	<div class="test">
 	<button type="button" class="btn btn-info btn-lg" id="result">情報提示</button> 
 	</div>
+	<style>
+	.test {
+    		position: relative;
+    		margin-top: -30px;
+	}    
 		
         </div>
 
