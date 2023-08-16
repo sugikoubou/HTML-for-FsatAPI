@@ -11,7 +11,7 @@ window.onload = () => {
   overlayInner.addEventListener('click', stopEvent, false);
   
   /** カメラ設定 */
-  var hoge = document.getElementByClassName("boda1");
+  var hoge = document.getElementsByClassName("boda1");
   const constraints = {
     audio: false,
     video: {
