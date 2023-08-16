@@ -18,7 +18,10 @@ h1 {
 
 }
 
-.boda {border: thick double gray;}
+.boda {
+  border: thick double gray;
+  width: 100%;
+}
 .boda1 {border: thick double pink;}
 
 #hello-wrapper {
