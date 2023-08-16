@@ -29,7 +29,7 @@ window.onload = () => {
     }
   };
 
-  console.log(ocument.getElementsByClassName("video").width);
+  console.log(document.getElementsByClassName("video").width);
 
   /**
    * カメラを<video>と同期
