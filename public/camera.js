@@ -18,15 +18,18 @@ window.onload = () => {
   
   
   /** カメラ設定 */
+  let hoge = document.getElementsByClassName("video").width
   const constraints = {
     audio: false,
     video: {
-      width: document.getElementsByClassName("video").width - 200,
-      height: document.getElementsByClassName("video").width,
+      width: hoge - 200,
+      height: hoge -200,
       facingMode: "environment"   // フロントカメラを利用する = user
       // facingMode: { exact: "environment" or user}  // リアカメラを利用する場合
     }
   };
+
+  console.log(ocument.getElementsByClassName("video").width);
 
   /**
    * カメラを<video>と同期
