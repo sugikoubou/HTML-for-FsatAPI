@@ -1,5 +1,5 @@
 import resCheck from './IfProcess';
-const reset = 0;
+var reset = 0;
 
 
 window.onload = () => {
@@ -42,8 +42,13 @@ window.onload = () => {
   document.querySelector("#shutter").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
 
-    if(reset == 1){reload()}
-    else{reset += 1}
+    if(reset == 1){
+	    reset = 0;
+	    reload()
+    }
+    else{
+	    reset += 1;
+    }
 
 
     // 演出的な目的で一度映像を止めてSEを再生する
