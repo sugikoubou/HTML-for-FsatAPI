@@ -52,7 +52,7 @@ button.btn {
   line-height: 1.5;
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 25px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -64,13 +64,14 @@ button.btn {
   vertical-align: middle;
   text-decoration: none;
   letter-spacing: 0.1em;
-  color: #FFFF00;
+  color: #000000;
   border-radius: 0.5rem;
-  box-shadow: 5px 5px 0 #6bb6ff;
+  box-shadow: 0 7px 0 #6bb6ff;
 }
 button.btn:hover {
 color: #ffffff;
 box-shadow: 0 0 0;
+transform: translate(0, 7px);
 }
 
 
