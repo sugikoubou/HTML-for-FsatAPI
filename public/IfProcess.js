@@ -1,8 +1,9 @@
-export default function resCheck(json) {
-  console.log(json);
-  console.log(json[1]);
+export default function resCheck(respo) {
+  console.log(respo);
+  const test = JSON.stringify(respo);
+  console.log(test);
   
-  if(json.Name === 'koiwa'){
+  if(respo.Name === 'koiwa'){
       console.log('ここは小岩');
   }
   /*
