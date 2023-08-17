@@ -39,12 +39,10 @@ window.onload = () => {
   });
 
   //シャッターボタンが押されたらの動作が下
-  document.getElementById("doom").addEventListener("click", getVideo(), false);
+  document.getElementById("doom").addEventListener("click", getVideo, false);
 
   
-   document.querySelector("#shutter").addEventListener("click", getVideo(), false);
-						       
-						       /*() => {
+   document.querySelector("#shutter").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
 
     // 演出的な目的で一度映像を止めてSEを再生する
@@ -62,7 +60,6 @@ window.onload = () => {
     POST(data);
 
 });
-*/
 
   function getVideo(){
 	  //ここに処理を書く
