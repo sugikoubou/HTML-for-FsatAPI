@@ -121,16 +121,18 @@ window.onload = () => {
 
 function show(tmp){
 	const info = JSON.parse(tmp.replace('[', '').replace(']', ''));
-	alert(info.Name);
-
 	const ctx = canvas.getContext("2d");
 	const imgs = ['info/credit/'+ info.Credit+'.jpg', info.Food, info.Inside];
 
 	var infoA = new Image();
 	infoA.src = imgs[0]
 
-	 infoA.onload = () => {
-		 ctx.drawImage(infoA, 0, canvas.height - 120, 298, 101);
+	infoA.onload = () => {
+		ctx.drawImage(infoA, 0, canvas.height - 120, 298, 101);
+		infoA.src = imgs[1]
+		ctx.drawImage(infoA, 160, 0, 400, 400);
+		infoA.src = imgs[2]
+		ctx.drawImage(infoA, 560, 0, 400, 400);
 	 }
 }
 
