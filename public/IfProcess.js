@@ -2,7 +2,7 @@ export default function resCheck(respo) {
   console.log(respo);
   const test = JSON.stringify(respo);
   console.log(test);
-  test = test.replace(/[/g, '');
+  test = test.replace(/[/g, '').replace(/]/g, '');
   console.log(test,test.Credit);
   
   if(test.Name === 'koiwa'){
