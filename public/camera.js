@@ -53,7 +53,7 @@ window.onload = () => {
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
      
     // canvasをpng
-　　const data = canvas.toDataURL("image/png");
+　　var data = canvas.toDataURL("image/png");
     
     POST(data);
     scrollTo(0, 1000);
