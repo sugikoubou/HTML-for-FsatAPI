@@ -44,7 +44,7 @@ window.onload = () => {
 
     if(reset == 1){
 	    reset = 0;
-	    reload()
+	    window.location.reload();
     }
     else{
 	    reset += 1;
