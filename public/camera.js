@@ -39,27 +39,12 @@ window.onload = () => {
   });
 
   //シャッターボタンが押されたらの動作が下
-  document.getElementById("doom").addEventListener("click", function(){
-	//ここに処理を書く
-  const ctx = canvas.getContext("2d");
-
-    // 演出的な目的で一度映像を止めてSEを再生する
-    video.pause();  // 映像を停止
-    setTimeout( () => {
-      video.play();    // 0.5秒後にカメラ再開
-    }, 500);
-
-    // canvasに画像を貼り付ける
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-     
-    // canvasをpng
-　　const data = canvas.toDataURL("image/png");
-    
-    POST(data);
-}, false);
+  document.getElementById("doom").addEventListener("click", getVideo(), false);
 
   
-   document.querySelector("#shutter").addEventListener("click", () => {
+   document.querySelector("#shutter").addEventListener("click", getVideo(), false);
+						       
+						       /*() => {
     const ctx = canvas.getContext("2d");
 
     // 演出的な目的で一度映像を止めてSEを再生する
@@ -77,6 +62,24 @@ window.onload = () => {
     POST(data);
 
 });
+*/
+
+  function getVideo(){
+	  //ここに処理を書く
+	  const ctx = canvas.getContext("2d");
+	  // 演出的な目的で一度映像を止めてSEを再生する
+	  video.pause();  // 映像を停止
+	  setTimeout( () => {
+          video.play();    // 0.5秒後にカメラ再開
+	  }, 500);
+
+    	  // canvasに画像を貼り付ける
+    	  ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+	  // canvasをpng
+	  const data = canvas.toDataURL("image/png");
+	  POST(data);
+  }
+	
 
   document.querySelector("#result").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
