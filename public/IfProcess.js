@@ -1,6 +1,6 @@
 export default function resCheck(json) {
   console.log(json);
-  console.log(json.1);
+  console.log(json[1]);
   
   alert(json);
   if(json.Name === 'koiwa'){
