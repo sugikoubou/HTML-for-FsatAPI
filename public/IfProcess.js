@@ -2,8 +2,9 @@ export default function resCheck(respo) {
   console.log(respo);
   const test = JSON.stringify(respo);
   console.log(test);
+  console.log(test.Credit test['Name'])
   
-  if(respo.Name === 'koiwa'){
+  if(test.Name === 'koiwa'){
       console.log('ここは小岩');
   }
   /*
