@@ -135,8 +135,8 @@ function show(tmp){
 
 	infoA.onload = () => {
 		ctx.drawImage(infoA, 0, canvas.height - 120, 298, 101);
-		ctx.drawImage(infoA, 160, 0, 400, 400);
-		ctx.drawImage(infoA, 560, 0, 400, 400);
+		ctx.drawImage(infoB, 160, 0, 400, 400);
+		ctx.drawImage(infoC, 560, 0, 400, 400);
 	 }
 }
 
