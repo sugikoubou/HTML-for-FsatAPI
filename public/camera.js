@@ -1,7 +1,5 @@
 import resCheck from './IfProcess';
-const infoA = new Image();
-const infoB = new Image();
-const infoC = new Image();
+
 
 
 window.onload = () => {
@@ -73,7 +71,7 @@ window.onload = () => {
 	  const data = canvas.toDataURL("image/png");
 	  POST(data);}
 	
-
+/*
   document.querySelector("#result").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
     const imgs = ['info/1/syouki.jpg', 'info/2/syouki.jpg', 'info/3/syouki.jpg','https://tblg.k-img.com/restaurant/images/Rvw/180968/640x640_rect_150a2a04531912b3b9067794ce5866e4.jpg'];
@@ -105,6 +103,7 @@ window.onload = () => {
 
     canvas.addEventListener("click", Aim);
 });
+*/
 
   function POST(imgNE) {
     const data = imgNE
@@ -127,6 +126,9 @@ function show(tmp){
 	const info = JSON.parse(tmp.replace('[', '').replace(']', ''));
 	const ctx = canvas.getContext("2d");
 	const imgs = ['info/credit/'+ info.Credit+'.jpg', info.Food, info.Inside];
+	var infoA = new Image();
+	var infoB = new Image();
+	var infoC = new Image();
 
 	
 	infoA.src = imgs[0]
