@@ -1,9 +1,11 @@
 export default function resCheck(name) {
   console.log(name);
+  const info = JSON.parse(name); //jsonからJSオブジェに変換
   
-  if(name === 'koiwa'){
+  if(info.Name === 'koiwa'){
       console.log('ここは小岩');
   }
+  /*
   if (condition1)
     statement1
   else if (condition2)
@@ -12,4 +14,5 @@ export default function resCheck(name) {
     statement3
   else
     statementN
+    */
 }
