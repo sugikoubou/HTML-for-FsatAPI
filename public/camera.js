@@ -130,7 +130,7 @@ function show(tmp){
 	infoA.src = imgs[0]
 
 	 infoA.onload = () => {
-		 ctx.drawImage(info1, 0, canvas.height - 120, 298, 101);
+		 ctx.drawImage(infoA, 0, canvas.height - 120, 298, 101);
 	 }
 }
 
