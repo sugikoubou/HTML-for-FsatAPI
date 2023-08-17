@@ -42,7 +42,7 @@ window.onload = () => {
   document.querySelector("#shutter").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
 
-    if(reset = 1){reload()}
+    if(reset == 1){reload()}
     else{reset += 1}
 
 
