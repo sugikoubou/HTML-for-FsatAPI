@@ -1,6 +1,7 @@
 export default function resCheck(json) {
   console.log(json);
-  
+  console.log(json.Name);
+  alert(json.Credit);
   if(json.Name === 'koiwa'){
       console.log('ここは小岩');
   }
