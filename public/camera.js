@@ -11,7 +11,6 @@ window.onload = () => {
   overlayInner.addEventListener('click', stopEvent, false);
   
   /** カメラ設定 */
-  let hoge = document.getElementsByClassName("boda1");
   const constraints = {
     audio: false,
     video: {
@@ -21,8 +20,6 @@ window.onload = () => {
       // facingMode: { exact: "environment" or user}  // リアカメラを利用する場合
     }
   };
-
-  console.log(hoge.offsetWidth);
 
   /**
    * カメラを<video>と同期
@@ -78,6 +75,7 @@ window.onload = () => {
     const imgs = ['info/1/syouki.jpg', 'info/2/syouki.jpg', 'info/3/syouki.jpg','https://tblg.k-img.com/restaurant/images/Rvw/180968/640x640_rect_150a2a04531912b3b9067794ce5866e4.jpg'];
     var info1 = new Image();
     info1.src = imgs[0];
+	  
     info1.onload = () => {
       let g = ctx.createLinearGradient(0, 0, SZ+4, SZ+4);
       g.addColorStop(0.0, 'red');
@@ -86,9 +84,7 @@ window.onload = () => {
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, SZ+4, SZ+4);
       ctx.drawImage(info1, 2, 2, SZ, SZ);
-
-      
-    };
+};
 
     
     var info4 = new Image();
@@ -104,10 +100,6 @@ window.onload = () => {
     };
 
     canvas.addEventListener("click", Aim);
-
-    
-
-    
 });
 
   function POST(imgNE) {
@@ -126,23 +118,6 @@ window.onload = () => {
       .then(resCheck)
     
   　}
-
-  function check(name) {
-    if(name === 'koiwa'){
-      console.log('ここは小岩');
-    } 
-  }
-
-  function get_func(url) {
-      fetch(url)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-    }
-
-
-
-
-
 
 
 
