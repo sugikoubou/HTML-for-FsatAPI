@@ -59,7 +59,8 @@ window.onload = () => {
     // canvasに画像を貼り付ける
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
      
-    // canvasをpng
+    // canvasをpngに変換
+    //食べログから画像引っ張ってるから再読み込みしないとキャンバス汚染で作動しない
 　　const data = canvas.toDataURL("image/png");
     
     POST(data);
