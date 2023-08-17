@@ -3,7 +3,7 @@ import resCheck from './IfProcess';
 window.onload = () => {
   const video  = document.querySelector("#camera");
   const canvas = document.querySelector("#picture");
-  let URL = "https://0668-2400-4150-4341-1f00-6869-81de-4671-c0c6.ngrok-free.app/api/predict"
+  let URL = "https://6210-2400-4150-4341-1f00-30d9-a78d-1656-309b.ngrok-free.app/api/predict"
   const overlay = document.getElementById('overlay');
   var SZ = 250;
 
