@@ -23,12 +23,6 @@ window.onload = () => {
     }
   };
 
-  //キャンバスのcors設定的な
-  var html2canvas(document.body, {
-	  allowTaint: true,
-	  foreignObjectRendering: true
-  });
-
   /**
    * カメラを<video>と同期
    */
