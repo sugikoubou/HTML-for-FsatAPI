@@ -1,4 +1,8 @@
 import resCheck from './IfProcess';
+const infoA = new Image();
+const infoB = new Image();
+const infoC = new Image();
+
 
 window.onload = () => {
   const video  = document.querySelector("#camera");
@@ -124,7 +128,7 @@ function show(tmp){
 	const ctx = canvas.getContext("2d");
 	const imgs = ['info/credit/'+ info.Credit+'.jpg', info.Food, info.Inside];
 
-	var infoA,infoB,infoC = new Image();
+	
 	infoA.src = imgs[0]
 	infoB.src = imgs[1]
 	infoC.src = imgs[2]
