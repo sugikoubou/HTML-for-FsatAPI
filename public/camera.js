@@ -134,8 +134,12 @@ function show(tmp){
 	infoC.src = imgs[2]
 
 	infoA.onload = () => {
+		ctx.lineWidth = 20;
+		ctx.strokeStyle = 'white';
+		
 		ctx.drawImage(infoA, 0, canvas.height - 120, 298, 101);
-		ctx.drawImage(infoB, 160, 0, 400, 400);
+		ctx.drawImage(infoB, 120, 20, 400, 400);
+		ctx.stroke()
 		ctx.drawImage(infoC, 560, 0, 400, 400);
 	 }
 }
