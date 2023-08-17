@@ -61,11 +61,11 @@ button.btn {
   vertical-align: middle;
   text-decoration: none;
   letter-spacing: 0.1em;
-  color: #212529;
+  color: #AAAADD;
   border-radius: 0.5rem;
 }
 button.btn:hover {
-color: #ffffff;
+color: #AAAAff;
 }
 
 
