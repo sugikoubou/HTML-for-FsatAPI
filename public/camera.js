@@ -43,7 +43,6 @@ window.onload = () => {
     const ctx = canvas.getContext("2d");
 
     if(reset == 1){
-	    reset = 0;
 	    window.location.reload();
     }
     else{
