@@ -22,7 +22,11 @@ export default function resCheck(respo) {
   }
 
   else{
-    console.log
+    console.log(err.name + ": " + err.message);
+  }
 
     
 }
+
+
+function castInfo()
