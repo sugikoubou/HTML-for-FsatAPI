@@ -1,4 +1,6 @@
 export default function resCheck(name) {
+  console.log(name);
+  
   if(name === 'koiwa'){
       console.log('ここは小岩');
   }
