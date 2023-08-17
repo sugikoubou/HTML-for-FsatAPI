@@ -115,17 +115,34 @@ window.onload = () => {
     //.then(res=>res.json()).then(console.log)
     fetch(URL,{method,body})
     .then(res=>res.json())
-	    	.then(resCheck)
-      
-    
+	    .then(JSON.stringify)
+	  	.then(show)
   　}
 
+function show(tmp){
+	const info = JSON.parse(tmp.replace('[', '').replace(']', ''));
+	alert(info.Name);
+
+	const ctx = canvas.getContext("2d");
+	const imgs = ['info/credit/'+ info.Credit+'.jpg', info.Food, info.Inside];
+
+	var infoA = new Image();
+	infoA.src = imgs[0]
+
+	 infoA.onload = () => {
+		 ctx.drawImage(info1, 0, canvas.height - 120, 298, 101);
+	 }
+}
+
+	
+	
 
 
 
 
 
 
+	
 
 
 
