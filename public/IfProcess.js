@@ -1,8 +1,7 @@
-export default function resCheck(name) {
-  console.log(name);
-  const info = JSON.parse(name); //jsonからJSオブジェに変換
+export default function resCheck(json) {
+  console.log(json);
   
-  if(info.Name === 'koiwa'){
+  if(json.Name === 'koiwa'){
       console.log('ここは小岩');
   }
   /*
