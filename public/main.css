@@ -44,6 +44,9 @@ h1 {
 /*.btn*/
 
 button.btn {
+
+  background: #eee;
+  
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.5;
@@ -63,9 +66,11 @@ button.btn {
   letter-spacing: 0.1em;
   color: #FFFF00;
   border-radius: 0.5rem;
+  box-shadow: 5px 5px 0 #6bb6ff;
 }
 button.btn:hover {
 color: #ffffff;
+box-shadow: 0 0 0;
 }
 
 
