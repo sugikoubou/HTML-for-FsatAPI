@@ -1,5 +1,5 @@
 import resCheck from './IfProcess';
-
+const reset = 0;
 
 
 window.onload = () => {
@@ -41,7 +41,10 @@ window.onload = () => {
   //a href使った処理時にid=doomでこれ　document.getElementById("doom").addEventListener("click", getVideo, false);
   document.querySelector("#shutter").addEventListener("click", () => {
     const ctx = canvas.getContext("2d");
-　　ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if(reset = 1){reload()}
+    else{reset += 1}
+
 
     // 演出的な目的で一度映像を止めてSEを再生する
     video.pause();  // 映像を停止
