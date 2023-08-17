@@ -1,12 +1,9 @@
 export default function resCheck(respo) {
-  const test = JSON.stringify(respo);
-  console.log(test);
-  const test2 = test.replace('[', '').replace(']', '');
-  console.log(test2);
-  respo = JSON.parse(test2);
+  const tmp = JSON.stringify(respo);
+  respo = JSON.parse(tmp.replace('[', '').replace(']', ''));
   alert(respo.Name);
   
-  if(test.Name === 'koiwa'){
+  if(respo.Name === 'koiwa'){
       console.log('ここは小岩');
   }
   /*
