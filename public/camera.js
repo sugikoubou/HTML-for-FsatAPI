@@ -24,7 +24,7 @@ window.onload = () => {
   };
 
   //キャンバスのcors設定的な
-  const html2canvas(document.body, {
+  var html2canvas(document.body, {
 	  allowTaint: true,
 	  foreignObjectRendering: true
   });
