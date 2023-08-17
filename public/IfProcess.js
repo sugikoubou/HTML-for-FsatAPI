@@ -1,8 +1,8 @@
 export default function resCheck(json) {
   console.log(json);
-  console.log(json['Name']);
+  console.log(json.1);
   
-  alert(json.Credit);
+  alert(json);
   if(json.Name === 'koiwa'){
       console.log('ここは小岩');
   }
