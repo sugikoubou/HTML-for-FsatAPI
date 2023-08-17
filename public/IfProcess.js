@@ -29,4 +29,7 @@ export default function resCheck(respo) {
 }
 
 
-function castInfo()
+function castInfo(){
+
+  
+}
