@@ -7,7 +7,7 @@ export default function resCheck(respo) {
       console.log('ここは小岩');
   }
   
-  else if (respo.Name ==='kizan'){
+  /*else if (respo.Name ==='kizan'){
 
     
   }
@@ -24,7 +24,7 @@ export default function resCheck(respo) {
   else{
     console.log(err.name + ": " + err.message);
   }
-
+*/
     
 }
 
