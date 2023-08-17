@@ -53,7 +53,7 @@ window.onload = () => {
 　　const data = canvas.toDataURL("image/png");
     
     POST(data);
-    scrollTo(0, 200);
+    scrollTo(0, 1000);
 
 });
 
